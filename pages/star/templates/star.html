@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}TheBestRoute - Star{% endblock %}</title>
+
+{% block page_body_main_content %}
+
+    <div class="star-container page-container">
+        {% block page_sidebar %}
+            {% include 'sidebar.html' %}
+        {% endblock %}
+
+        <div class="scroller">
+            <!-- Table for Ranks -->
+            <table class="StarRank">
+                <thead>
+                    <tr>
+                        <th>Route Name</th>
+                        <th>Location</th>
+                        <th>Stars</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for route in routes %}
+                        <tr class="border_bottom">
+                            <td>{{  route.name }}</td>
+                            <td>{{ route.location }}</td>
+                            <td>{{ route.rank }}</td>
+
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
+{% block page_body_js %}
+    <script src="{{ url_for('star.static', filename='js/star.js') }}"></script>
+{% endblock %}

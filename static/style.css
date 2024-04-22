@@ -1,0 +1,1060 @@
+body
+{
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui;
+    background-color: rgba(64, 123, 64, 0.91);
+    color: whitesmoke;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    line-height: 40px;
+    margin: 22px 0;
+}
+
+p {
+    text-align: center;
+    line-height: 20px;
+}
+
+
+.footer{
+}
+
+
+input[type="checkbox"] {
+        width: auto;
+    margin-top: 15px;
+    position: relative;
+    top: 2px;
+}
+
+.HomepageImage {
+    display: flex;
+    justify-content: right;
+    margin-left: 50px;
+}
+
+.home-image{width: 100%;height: 100%;object-fit: scale-down;grid-column: 4/4;grid-row: 1/3;}
+
+.home-form{
+    grid-column: 2/4;
+    color: whitesmoke;
+    background-color: rgba(64, 123, 64, 0.91);
+    outline: 1px solid rgba(255,255,255,0.125);
+}
+
+.signup-image{
+    width: 200px;
+    height: inherit;
+    object-fit: cover;
+}
+
+.signup-form{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/4;
+    grid-row: 1/4;
+    color: whitesmoke;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(64, 123, 64, 0.91);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.125);
+}
+
+
+input{
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button{
+    background-color: rgba(151, 189, 151, 0.83);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 5px;
+    margin: 7px 0;
+    width: 100%;
+    font-size: 18px;
+}
+
+button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.headingscontainer{
+    text-align: center;
+}
+
+.MainContainer{
+    padding: 16px;
+}
+
+.MainContainer label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.subcontainer a{
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+span.forgotpassword a{
+    float: right;
+    color: whitesmoke;
+    padding-top: 16px;
+}
+
+.forgotpassword a{
+    color: #9ed19e;
+}
+
+.forgotpassword a:link{
+    text-decoration: none;
+}
+
+.Register{
+    color: white;
+    text-align: center;
+}
+
+.Register a{
+    color: #9ed19e;
+}
+.Register a:link{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px){
+    form{
+        width: 25rem;
+    }
+}
+
+@media  screen and (max-width: 400px){
+    form{
+        width: 20rem;
+    }
+}
+
+.page-container {
+    height: calc(100vh - 255px);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, min-content);
+    gap: 25px;
+    padding: 25px;
+}
+
+.Signup-MainContainer {
+        display: grid;
+        gap: 10px;
+        margin: auto 25px;
+}
+
+.Signup-MainContainer div {display: grid;grid-template-columns: 100px auto;align-items: center;gap: 7px;text-align: left;}
+
+.submit-btn-container {
+  margin: 0 25px;
+}
+
+.submit {
+display: flex;
+    margin: 20px auto;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.header img {
+    margin: 5px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.footer {
+    position: fixed;
+    padding-bottom: 30px;
+    height: 20px;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+    background-color: #518651;
+    z-index: 3;
+}
+
+/*SideBar */
+.sidebar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  grid-row: 1/2;
+  grid-column: 1/1;
+  height: 100%;
+  max-height: 330px;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: rgba(6, 7, 6, 0.83);
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: rgba(151, 189, 151, 0.83);
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: rgba(151, 189, 151, 0.83);
+  color: white;
+}
+
+.sidebar .active-page {
+      pointer-events: none;
+      color: white;
+      background: rgba(151, 189, 151, 0.83);
+      transform: scale(1.05);
+      padding: 16px 21px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      position: relative;
+      top: -5px;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+/*scroller star ranking*/
+.scroller {
+grid-column: 2/-1;
+    grid-row: 1/-1;
+}
+
+blockquote{
+  font-size: 1.4em;
+  margin:50px auto;
+  font-family:Open Sans;
+  font-style:italic;
+  color: rgba(6, 7, 6, 0.83);
+  padding:1.2em 30px 1.2em 75px;
+  line-height:1.6;
+  position: relative;
+  background:#EDEDED;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color: rgba(64, 123, 64, 0.91);
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+blockquote span{
+  display:block;
+  color:#333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+}
+
+
+/*COUPON*/
+.alert-coupon {
+border: 1px dashed;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.alert-coupon p {
+  padding: 0 10px 20px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/*riding SELECT*/
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+}
+.select-styled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 8px 15px;
+}
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+  .select-options li {
+    margin: 0;
+    padding: 12px 0;
+    text-indent: 15px;
+  }
+
+/*riding List*/
+ul {
+  display: block;
+  margin-left: -10px;
+}
+
+ul li {
+  display: block;
+  position: relative;
+}
+
+ul li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+ul li:before {
+  content: "";
+  position: absolute;
+  top: 1.2em;
+  left: -30px;
+  margin-top: -.9em;
+  background: #f69ec4;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+
+
+/*Star Rank*/
+
+.StarRank{
+  width: 100%;
+    text-align: left;
+}
+table {
+    border-spacing: inherit;
+    border-spacing: 0;
+}
+thead {
+      height: 30px;
+          background: #4b794b;
+}
+th {
+  padding: 5px 15px;
+}
+tr.border_bottom td {
+border-bottom: 1pt solid #4b794b;
+    text-align: left;
+    width: auto;
+    height: 40px;
+    padding: 5px 15px;
+}
+
+/*StarQuote*/
+q {
+grid-column: 1/-1;
+    width: 100%;
+    text-align: center;
+    margin: 30px auto;
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: 1px;
+    font-style: italic;
+    font-size: 21px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 35px;
+}
+q::before {
+  content: open-quote;
+}
+q::after {
+  content: close-quote;
+}
+
+
+/*Star Rank*/
+.wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    background: transparent;
+    grid-column: 2/-1;
+    grid-row: 2/4;
+    width: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.wrapper input {
+	display: none;
+}
+.wrapper label {
+	display: block;
+	cursor: pointer;
+	width: 100px;
+transform: rotate(72deg);
+}
+.wrapper label:before {
+	content: '★';
+	position: relative;
+	display: block;
+	font-size: 100px;
+	color: black;
+}
+.wrapper label:after {
+	content: '★';
+	position: absolute;
+	display: block;
+	font-size: 100px;
+	color: gold;
+	top: 0;
+	opacity: 0;
+	transition: .6s;
+}
+.wrapper label:hover:after, .wrapper label:hover~label:after, .wrapper input:checked~label:after {
+	opacity: 1;
+}
+
+
+
+.rank-container {
+grid-template-rows: repeat(14, 50px);
+}
+
+.contactus-container {
+grid-template-rows: repeat(4, 50px);
+}
+
+.contactus-container .sidebar {
+grid-row: 1/6;
+    grid-column: 1;
+}
+
+textarea.form-control {
+    /* Ensure that the textarea takes up the full width */
+    width: 100%;
+    /* Define the height of the textarea */
+    height: auto;
+    /* Add padding for better appearance */
+    padding: 10px;
+    /* Define border styles */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* Ensure that the font is consistent */
+    font-family: Arial, sans-serif;
+    /* Define placeholder text color */
+    color: #777; /* You can adjust the color to match your design */
+}
+
+.error {
+    color: red;
+    font-size: 14px; /* Adjust the font size as needed */
+    margin-top: 5px; /* Add some space between the input field and the error message */
+}
+
+/* Style placeholder text */
+textarea.form-control::placeholder {
+    color: #999; /* Placeholder text color */
+}
+
+.rank-container .sidebar {
+grid-row: 1/6;
+    grid-column: 1;
+}
+
+/*Fill in review*/
+#feedback {
+grid-row: 5/12;
+    grid-column: 2/-1;
+    padding: 20px;
+    border: solid 1px #f1f1f1;
+    background: #fbfbfb;
+    box-shadow: #e6e6e6 0 0 4px;
+    border-radius: 0.25rem;
+}
+#contactus {
+grid-row: 1/12;
+    grid-column: 2/-1;
+    padding: 20px;
+    border: solid 1px #f1f1f1;
+    background: #fbfbfb;
+    box-shadow: #e6e6e6 0 0 4px;
+    border-radius: 0.25rem;
+}
+
+
+@media (max-width: 720px) {
+  #feedback{
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  #feedback{
+    padding: 10px;
+  }
+}
+
+#fh2{
+    letter-spacing: 3px;
+    grid-column: 2/-1;
+    grid-row: 1;
+    color: #a7c6a7;
+    text-align: center;
+    height: 40px;
+
+}
+
+@media (max-width: 400px) {
+  #fh2{
+    font-size: 20px;
+  }
+}
+
+
+#fh6 {
+grid-column: 2/-1;
+    grid-row: 4/5;
+    text-align: center;
+    font-weight: normal;
+    font-size: 18px;
+    margin: 0;
+}
+
+@media (max-width: 400px) {
+  #fh6{
+    font-size: 12px;
+  }
+}
+
+.pinfo {
+ margin: 8px auto;
+ font-weight: bold;
+ line-height: 1.5;
+ color: #0d0d0d;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: bold;
+  color: #6C6262;
+  background-color: #fff;
+  background-image: none;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+}
+
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+.form-control:focus {
+  color: #696060;
+  background-color: #fff;
+  border-color: #5cb3fd;
+  outline: none;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #F34949;
+  opacity: 1;
+}
+
+.form-control::-moz-placeholder {
+  color: brown;
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: blue;
+  opacity: 1;
+}
+
+.form-control::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.form-control:disabled, .form-control[readonly] {
+  background-color: red;
+  opacity: 1;
+}
+
+.form-control:disabled {
+  cursor: not-allowed;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: calc(2.25rem + 2px);
+}
+
+select.form-control:focus::-ms-value {
+  color: green;
+  background-color: #fff;
+}
+
+.form-control-file,
+.form-control-range {
+  display: block;
+}
+
+.input-group {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.input-group .form-control {
+  position: relative;
+  z-index: 2;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+}
+
+.input-group .form-control:focus, .input-group .form-control:active, .input-group .form-control:hover {
+  z-index: 3;
+}
+
+.input-group-addon,
+.input-group-btn,
+.input-group .form-control {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.input-group-addon:not(:first-child):not(:last-child),
+.input-group-btn:not(:first-child):not(:last-child),
+.input-group .form-control:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+.input-group-addon,
+.input-group-btn {
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.input-group-addon {
+  width: 45px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.25;
+  color: #2e2e2e;
+  text-align: center;
+  background-color: #eceeef;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.input-group-addon.form-control-sm,
+.input-group-sm > .input-group-addon,
+.input-group-sm > .input-group-btn > .input-group-addon.btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.2rem;
+}
+
+.input-group-addon.form-control-lg,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .input-group-addon.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  border-radius: 0.3rem;
+}
+
+.input-group-addon input[type="radio"],
+.input-group-addon input[type="checkbox"] {
+  margin-top: 0;
+}
+
+.input-group .form-control:not(:last-child),
+.input-group-addon:not(:last-child),
+.input-group-btn:not(:last-child) > .btn,
+.input-group-btn:not(:last-child) > .btn-group > .btn,
+.input-group-btn:not(:last-child) > .dropdown-toggle,
+.input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.input-group-addon:not(:last-child) {
+  border-right: 0;
+}
+
+.input-group .form-control:not(:first-child),
+.input-group-addon:not(:first-child),
+.input-group-btn:not(:first-child) > .btn,
+.input-group-btn:not(:first-child) > .btn-group > .btn,
+.input-group-btn:not(:first-child) > .dropdown-toggle,
+.input-group-btn:not(:last-child) > .btn:not(:first-child),
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.form-control + .input-group-addon:not(:first-child) {
+  border-left: 0;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: normal;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:focus, .btn:hover {
+  text-decoration: none;
+}
+
+.btn:focus, .btn.focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.25);
+          box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.25);
+}
+
+.btn.disabled, .btn:disabled {
+  cursor: not-allowed;
+  opacity: .65;
+}
+
+.btn:active, .btn.active {
+  background-image: none;
+}
+
+a.btn.disabled,
+fieldset[disabled] a.btn {
+  pointer-events: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #025aa5;
+  border-color: #01549b;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
+          box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+
+.btn-primary:active, .btn-primary.active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #025aa5;
+  background-image: none;
+  border-color: #01549b;
+}
+
+
+.wp-block-quote {
+    position: relative;
+    margin: 0;
+    font-family: 'system-ui', cursive;
+    background: rgba(151, 189, 151, 0.83);
+    color: #3f3f5a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wp-block-quote-1 {grid-row: 3/4;grid-column: 1/3;width: 100%;height: 100%;}
+
+.wp-block-quote-2 {
+  grid-column: 3/-1;
+  grid-row: 3/4;
+  width: 100%;
+  height: 100%;
+}
+ 
+blockquote {
+    font-weight: 100;
+    font-size: 2rem;
+    line-height: 1.4;
+    position: relative;
+    margin: 0;
+    padding: 0;
+} 
+ 
+blockquote:before, 
+blockquote:after { 
+    position: absolute; 
+    color: #f1efe6; 
+    font-size: 8rem; 
+    width: 4rem; 
+    height: 4rem; 
+} 
+ 
+blockquote:before {
+    content: '“';
+    left: 0;
+    top: -3rem;
+} 
+ 
+blockquote:after {
+    content: '”';
+    right: 0rem;
+    bottom: 0rem;
+} 
+ 
+cite { 
+    line-height: 3; 
+    text-align: left; 
+} 
+
+.wp-block-quote p {
+  line-height: 50px;
+  padding: 0 30px;
+  margin-bottom: 0;
+}
+
+.wp-block-quote cite {
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.riding-container {
+display: grid;
+    height: calc(100vh - 150px);
+    grid-template-rows: repeat(4, min-content);
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0 50px;
+    align-items: flex-start;
+}
+
+.riding-container .sidebar {
+    grid-row: 1/-1;
+}
+
+.riding-container #Location {
+grid-column: 2/3;
+    height: 45px;
+}
+
+.riding-container .list {
+      grid-row: 1 / span 3; /* Span the remaining three rows */
+    grid-column: 3; /* Place the list on the third column (right side) */
+    margin-top: 0; /* Remove margin from the top */
+    margin-top: 45px; /* Remove top margin */
+    margin-left: 20px; /* Adjust left margin for spacing */
+    margin-bottom: 0;
+}
+
+.riding-container .title {
+    margin: 0;
+    grid-column: 3/-1;
+    grid-row: 1/-1;
+    text-align: left;
+    font-size: 20px;
+    line-height: normal;
+}
+
+.riding-container .listTitle {
+grid-row: 1; /* Place the title in the first row */
+    grid-column: 3; /* Place the title in the third column (right side) */
+    margin-top: 0; /* Remove top margin */
+    margin-left: 0px; /* Adjust left margin for spacing */
+    margin-bottom: 10px;
+}
+
+.riding-container #TypeOfCycling {
+    grid-column: 2/3;
+    grid-row: 1;
+    height: 45px;
+}
+
+.signup-container {
+  display: grid;
+  height: calc(100vh - 50px);
+}
+
+.signup-container .Coupon {
+      grid-column: 4/-1;
+    grid-row: 1/3;
+}
+
+.signup-container .footer {
+  grid-row: 5/-1;
+  grid-column: 1/-1;
+    display: flex;
+  justify-content: center;
+}
+
+.map-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.map-container #map {
+grid-column: 2/-1;
+    grid-row: 1/-1;
+}
+
+input::placeholder {
+      color: #c4c4c4 !important;
+    font-weight: 100 !important;
+}
+
+input {
+  color: black !important;
+  font-weight: 100 !important;
+}
+
+.thanks-container {
+  overflow: hidden;
+grid-template-rows: repeat(4, 1fr);
+}
+
+.thanks-container .sidebar {
+  z-index: 999;
+}
+
+.thanks {
+    display: flex;
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    width: 75%;
+    height: 75%;
+    margin: auto;
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    animation: 1s linear 1s infinite alternate none running scaleinout;
+}
+
+@keyframes scaleinout {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+    /* unset properties i.e. 'filter' will revert to default values */
+  }
+}
+
+.invalid {
+  border: 1px solid red;
+}

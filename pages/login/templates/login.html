@@ -1,0 +1,68 @@
+ {% extends 'base.html' %}
+
+<title>{% block title %}TheBestRoute - Login{% endblock %}</title>
+
+{% block page_body_main_content %}
+    <p>"At The Best Route, we know the value of the cycling experience.
+We want our customers to be satisfied to the fullest".</p>
+
+
+<div class="page-container">
+<!--    <img class="HomepageImage">-->
+    <img class="home-image" src="../static/images/biking.jpg"
+     alt="home-image">
+
+    {% block page_sidebar %}
+
+{% include 'sidebar.html' %}
+
+{% endblock %}
+
+<form class="home-form">
+         <!-- Headings for the form -->
+         <div class="headingscontainer">
+              <h3>Sign In</h3>
+              <p>Sign in with your username and password</p>
+         </div>
+     
+            <!--Main container for all the inputs -->
+         <div class="MainContainer">
+             <!-- Username -->
+             <label for="Username">Username</label>
+             <input type="text" placeholder="Enter Username" name="Username" id="username" required>
+     
+             <br><br>
+     
+             <!-- Password -->
+             <label for="Password">Password</label>
+             <input  type="Password" placeholder="Enter Password" name="Password" id="password" required>
+     
+             <br>
+     
+             <!-- Sub container for the checkbox and forgot password link -->
+             <div class="subcontainer">
+                 <label>
+                     <input type="checkbox" checked="checked"  name="remember" > Remember me
+                 </label>
+                 <p class="forgotpassword"> <a href="#"> Forgot Password?</a> </p>
+             </div>
+     
+             <!-- Submit Button -->
+             <button onclick="doLogin(event)">Login</button>
+     
+             <!-- Sign up Link -->
+             <p class="Register"> Not a member? <a href="#"> Register Here!</a></p>
+     
+         </div>
+     
+     </form>
+
+<blockquote class="wp-block-quote wp-block-quote-1"><p>The best biking app of 2022</p><cite>Israel cycling Magazine</cite></blockquote>
+<blockquote class="wp-block-quote wp-block-quote-2"><p> Its so Easy to use, even my grandma uses this app when she wants to find the best downhill route</p><cite>Timeout Tel Aviv</cite></blockquote>
+    
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('login.static', filename='js/login.js') }}"></script>
+{% endblock %}
+</div>

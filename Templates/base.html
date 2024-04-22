@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block page_head_meta %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock %}
+    {# CSS #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}"/>
+    {% block page_head_css %}{% endblock %}
+    <!-- Include common fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    {# Title #}
+    <title>{% block title %}TheBestRoute{% endblock %}</title>
+</head>
+<body>
+{% block header %}
+    {% include 'header.html' %}
+{% endblock %}
+
+
+{% block page_body_main_content %}
+
+{% endblock %}
+
+{% block footer %}
+
+{% include 'footer.html' %}
+
+{% endblock %}
+
+
+{# JS #}
+{% block page_body_js %}{% endblock %}
+</body>
+</html>

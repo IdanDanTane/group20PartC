@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}TheBestRoute - Search{% endblock %}</title>
+
+
+{% block page_body_main_content %}
+<div class="riding-container page-container">
+
+ {% block page_sidebar %}
+
+{% include 'sidebar.html' %}
+
+{% endblock %}
+
+        <h2 class="listTitle">Our Community's favorites</h2>
+    <ul class="list">
+            <li class="list-item one">Mount Hermon</li>
+            <li class="list-item two">Ramon Valley</li>
+            <li class="list-item three">Ein Akev</li>
+            <li class="list-item four">Negev Downhill</li>
+        </ul>
+    <form id="searchForm" action="/star" method="get"> <!-- Added an id to the form for validation -->
+        <label for="TypeOfCycling">Choose Category:</label>
+        <select id="TypeOfCycling" name="TypeOfCycling" required> <!-- Added name attribute for form submission and required attribute for validation -->
+            <option value="hide">-- What type of cycling? --</option>
+            <option value="Road">Road</option>
+            <option value="Gravel">Gravel</option>
+            <option value="Mountain">Mountain</option>
+            <option value="Downhill">Downhill</option>
+            <option value="Enduro">Enduro</option>
+        </select>
+
+        <br>
+        <br>
+        <label for="Location">Where Will You Ride?:</label> <!-- Fixed label placement -->
+        <select id="Location" name="Location" required> <!-- Added name attribute for form submission and required attribute for validation -->
+            <option value="hide">-- Location --</option>
+            <option value="Afula">Afula</option>
+            <option value="Beer Sheva">Beer Sheva</option>
+            <option value="Carmiel">Carmiel</option>
+            <option value="Dimona">Dimona</option>
+            <option value="Gadera">Gedera</option>
+            <option value="Hadera">Hadera</option>
+            <option value="Jerusalem">Jerusalem</option>
+            <option value="Lod">Lod</option>
+            <option value="Modiin">Modiin</option>
+            <option value="Netanya">Netanya</option>
+            <option value="Or Yehuda">Or Yehuda</option>
+            <option value="Pardesiya">Pardesiya</option>
+            <option value="Tel Aviv">Tel Aviv</option>
+            <option value="Rehovot">Rehovot</option>
+            <option value="Ramat Gan">Ramat Gan</option>
+            <option value="Zicron Yaakov">Zicron Yaakov</option>
+            <option value="Yehud">Yehud</option>
+        </select>
+        <button type="submit" class="choose-btn">Choose</button> <!-- Changed button type to submit for form submission -->
+
+
+
+
+    </form>
+
+</div>
+{% endblock %}
+{% block page_body_js %}
+    <script src="{{ url_for('search.static', filename='js/search.js') }}"></script>
+{% endblock %}
+</div>

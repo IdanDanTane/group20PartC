@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}TheBestRoute - Contact Us{% endblock %}</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../static/style.css">
+
+{% block page_body_main_content %}
+   {% block page_sidebar %}
+
+{% include 'sidebar.html' %}
+
+{% endblock %}
+<div class="container">
+
+    <form id="contactus" action="#" method="post">
+      <div class="pinfo" >Fill in the details </div>
+        <div class="form-group">
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-user"></i></span>
+            <input name="name" placeholder="Full Name" id="fullName" class="form-control" type="text" required>
+        <div id="fullNameError" class="error"></div>
+        </div>
+        </div>
+          </div>
+    <div class="form-group">
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+            <input type="email" placeholder="example@mail.com" id="email" class="form-control" name="email" required>
+        <div id="emailError" class="error"></div>
+        </div>
+          </div>
+        </div>
+        <div class="form-group">
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+            <input type="tel" id="phone" name="phone"  placeholder="Format: 050-1234567">
+        <div id="phoneError" class="error"></div>
+        </div>
+        </div>
+          </div>
+        <div class="form-group">
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+      <textarea class="form-control" placeholder="Write Your Message" id="message" rows="3" name="message" required></textarea>
+        <div id="messageError" class="error"></div>
+        </div>
+      </div>
+          </div>
+        <button type="submit" onclick="sendForm(event)" class="btn btn-primary">Send</button>
+    </form>
+</div>
+  </div>
+{% endblock %}
+
+<div class="footer">
+    <p>Contact Us. Email: thebestroute@gmail.com . Facebook: The Best Route . Phone: 083214765</p>
+    </div>
+
+{% block page_body_js %}
+    <script src="{{ url_for('contactus.static', filename='js/contactus.js') }}"></script>
+{% endblock %}
+
+

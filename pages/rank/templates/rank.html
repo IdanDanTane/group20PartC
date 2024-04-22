@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}TheBestRoute - Rank{% endblock %}</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+{% block page_body_main_content %}
+
+
+  <div class="rank-container page-container">
+
+
+ {% block page_sidebar %}
+
+{% include 'sidebar.html' %}
+
+
+{% endblock %}
+
+    <!--Potential Stars-->
+      <div class="wrapper">
+        <div class="wrapper">
+     <input type="radio" name="rate" id="rate1">
+     <label for="rate1"></label>
+     <input type="radio" name="rate" id="rate2">
+     <label for="rate2"></label>
+     <input type="radio" name="rate" id="rate3">
+     <label for="rate3"></label>
+     <input type="radio" name="rate" id="rate4">
+     <label for="rate4"></label>
+     <input type="radio" name="rate" id="rate5">
+     <label for="rate5"></label>
+    </div>
+      </div>
+
+
+
+  <!-- Fill in review-->
+<h2 id="fh2">WE APPRECIATE YOUR REVIEWS AND RANKING!</h2>
+<h6 id="fh6">Your review and ranking will help our community have the best riding experiences!</h6>
+
+<form id="feedback" onsubmit="submitFeedback(event)">
+  <div class="pinfo">Fill in the details</div>
+
+  <div class="form-group">
+    <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fas fa-location-arrow"></i></span>
+        <select class="form-control" id="location">
+          <option value="hide">-- Location --</option>
+          <option value="A">Afula</option>
+          <option value="B">Beer Sheva</option>
+          <option value="C">Carmiel</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fas fa-biking"></i></span>
+        <select class="form-control" id="typeOfCycling">
+          <option value="hide">-- What Road Did You Ride? --</option>
+          <option value="Ramon Valley">Ramon Valley</option>
+          <option value="Ein Akev">Ein Akev</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="pinfo">How many stars would you give to your riding experience?</div>
+
+  <div class="form-group">
+    <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-heart"></i></span>
+        <select class="form-control" id="stars">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+    </div>
+  </div>
+<div class="pinfo">Write a review</div>
+
+  <div class="form-group">
+    <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+        <textarea placeholder="Write Your Review Here" class="form-control" id="review" rows="3"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Send</button>
+</form>
+
+  </div>
+    </body>
+    </html>
+
+    <div class="footer">
+    <p>Contact Us. Email: thebestroute@gmail.com . Facebook: The Best Route . Phone: 083214765</p>
+    </div>
+
+  </div>
+
+{% endblock %}
+{% block page_body_js %}
+
+<script src="{{ url_for('rank.static', filename='js/rank.js') }}"></script>
+  <script src="/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}
+</body>
+</html>

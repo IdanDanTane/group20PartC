@@ -1,0 +1,8 @@
+<div class="sidebar">
+    <a href="login.html" {% if 'login.html' in request.path %}class="active-page"{% endif %}>Home</a>
+    <a href="search.html" {% if 'search.html' in request.path %}class="active-page"{% endif %}>Search A Route</a>
+    <a href="map.html" {% if 'map.html' in request.path %}class="active-page"{% endif %}>Map View</a>
+    <a href="star.html" {% if 'star.html' in request.path %}class="active-page"{% endif %}>Star Ranking</a>
+    <a href="rank.html" {% if 'rank.html' in request.path %}class="active-page"{% endif %}>Rank Your Experience</a>
+    <a href="contactus.html" {% if 'contactus.html' in request.path %}class="active-page"{% endif %}>Contact Us</a>
+</div>

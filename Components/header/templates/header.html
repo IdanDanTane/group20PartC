@@ -1,0 +1,12 @@
+{% set page_nicknames = {
+    "login.html": "Home",
+    "search.html": "Search A Route",
+    "map.html": "Map View",
+    "star.html": "Star Ranking",
+    "rank.html": "Rank Your Experience",
+    "contactus.html": "Contact Us"
+} %}
+
+{% set page_name = request.path.split('/')[-1] %}
+{% set nickname = page_nicknames.get(page_name, "Home") %}
+<h1>{{ nickname }}</h1>
